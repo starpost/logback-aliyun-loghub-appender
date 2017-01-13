@@ -28,6 +28,18 @@
 			<version>1.7.22</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>starpost-releases</name>
+			<url>http://repo.starpost.cn:8081/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>starpost-snapshots</name>
+			<url>http://repo.starpost.cn:8081/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
