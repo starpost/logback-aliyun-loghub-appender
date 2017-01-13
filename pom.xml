@@ -1,33 +1,34 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.sense.cloud</groupId>
-  <artifactId>logback-aliyun-loghub-appender</artifactId>
-  <version>0.1.0</version>
-  <name>logback-aliyun-loghub-appender</name>
-  
-  <dependencies>
-        <dependency>
-            <groupId>com.aliyun.openservices</groupId>
-            <artifactId>log-loghub-producer</artifactId>
-            <version>0.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.6</version>
-        </dependency>
-    </dependencies>
-    <build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.starpost</groupId>
+	<artifactId>logback-aliyun-loghub-appender</artifactId>
+	<version>0.1.4</version>
+	<name>Logback Aliyun LogHub Appender</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.aliyun.openservices</groupId>
+			<artifactId>log-loghub-producer</artifactId>
+			<version>0.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.22</version>
+		</dependency>
+	</dependencies>
+	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
@@ -45,7 +46,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.0.2</version>
-
 			</plugin>
 
 			<plugin>

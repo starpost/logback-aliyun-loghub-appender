@@ -17,33 +17,23 @@
             <pattern>%m%n</pattern>
         </encoder>
     </appender>
-    <appender name="testAppender" class="com.sense.cloud.aliyun.loghub.logback.LoghubAppender">
+    <appender name="testAppender" class="cn.starpost.aliyun.loghub.logback.LoghubAppender">
         <!-- 日志服务的project名，必选参数 -->
-        <projectName>rt-logs</projectName>
+        <projectName>starpost</projectName>
         <!-- 日志服务的logstore名，必选参数 -->
-        <logstore>test-1st</logstore>
+        <logstore>logistics</logstore>
         <!-- 日志服务的http地址，必选参数 -->
-        <endpoint>cn-beijing-intranet.log.aliyuncs.com</endpoint>
+        <endpoint>cn-shenzhen.log.aliyuncs.com</endpoint>
+		<topic>starpost</topic>
         <!-- 用户身份标识，必选参数 -->
-        <accessKeyId>ryac1mqiO2eObj8r</accessKeyId>
-        <accessKey>LRu5C6Bp3wHAy43n7p9DJdW5vYUR5W</accessKey>
-        <!-- 被缓存起来的日志的发送超时时间，如果缓存超时，则会被立即发送，单位是毫秒，可选参数 -->
-        <packageTimeoutInMS>5000</packageTimeoutInMS>
-        <!-- 每个缓存的日志包中包含日志数量的最大值，不能超过4096，可选参数 -->
-        <logsCountPerPackage>4096</logsCountPerPackage>
-        <!-- 每个缓存的日志包的大小的上限，不能超过5MB，单位是字节，可选参数 -->
-        <logsBytesPerPackage>5242880</logsBytesPerPackage>
-        <!-- Appender实例可以使用的内存的上限，单位是字节，默认是100MB，可选参数 -->
-        <!--
-        <memPoolSizeInByte>1048576000</memPoolSizeInByte>
-         -->
-        <!-- 后台用于发送日志包的IO线程的数量，默认值是1，可选参数 -->
-        <ioThreadsCount>3</ioThreadsCount>
+        <accessKeyId>XXXXXX</accessKeyId>
+        <accessKey>XXXXXX</accessKey>
         <!-- 输出到日志服务的时间格式，使用java中SimpleDateFormat格式化时间，默认是ISO8601，可选参数 -->
-        <timeFormat>yyyy-MM-dd HH:mm:ss,SSS</timeFormat>
+        <timeFormat>yyyy-MM-dd HH:mm:ss.SSS</timeFormat>
         <timeZone>GMT+8</timeZone>
     </appender>
     <logger name="aliyun.loghub.logback" additivity="false" level="INFO">
+        <appender-ref ref="console"/>
         <appender-ref ref="rfAppender"/>
         <appender-ref ref="testAppender"/>
     </logger>
