@@ -193,7 +193,7 @@ public class LoghubAppender extends AppenderBase<ILoggingEvent> {
 		} else {
 			item.PushBack("location", event.getLoggerName());
 		}
-		String message = event.getMessage().toString();
+		String message = event.getFormattedMessage();
 		item.PushBack("message", message);
 		IThrowableProxy throwable = event.getThrowableProxy();
 		if (throwable != null) {
